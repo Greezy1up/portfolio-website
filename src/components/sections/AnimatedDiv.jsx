@@ -1,19 +1,25 @@
 // AnimatedDiv.jsx
 
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import sal from "sal.js";
+import "sal.js/dist/sal.css";
 
 const AnimatedDiv = ({ children, className = "", delay = 0, ...rest }) => {
+  useEffect(() => {
+    sal(); // initialize Sal.js when the component mounts
+  }, []);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, translateY: 50 }}
-      whileInView={{ opacity: 1, translateY: 0 }}
-      viewport={{ once: true}}
-      transition={{ duration: 0.6, ease: "easeOut", delay }}
+    <div
+      data-sal="fade"                  // equivalent of "animate in"
+      data-sal-duration="600"           // duration in ms
+      data-sal-delay={delay}            // delay in ms
+      data-sal-easing="ease-out"        // easing
       className={className}
       {...rest}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 

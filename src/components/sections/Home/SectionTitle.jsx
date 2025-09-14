@@ -3,14 +3,15 @@ import AnimatedDiv from "../AnimatedDiv";
 
 const SectionTitle = ({title, img}) => {
 
+
 return (
 
-      <AnimatedDiv
-        initial={{ opacity: 0, x: 75 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className='
+    <div
+      data-sal="slide-left"
+      data-sal-duration="600"
+      data-sal-delay="0"
+      data-sal-easing="ease-in-out-sine"
+      className='
         flex flex-col 
         items-center
         '>
@@ -25,7 +26,7 @@ return (
                 text-center
         ">{title}</h2>
 
-      </AnimatedDiv>
+      </div>
 );
 }
 

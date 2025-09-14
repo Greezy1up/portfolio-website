@@ -1,50 +1,53 @@
+import React, { useEffect } from "react";
 import { ProdCards } from "./ProdCards";
 import { DevCards } from "./DevCards";
 import KPIcard from "./KPIcard";
-import AnimatedDiv from "../../AnimatedDiv";
 import SectionTitle from "../SectionTitle";
+import sal from "sal.js";
+import "sal.js/dist/sal.css";
 
-import vidIMG from '/src/assets/Statistics/circle-video.png';
-import eyeIMG from '/src/assets/Statistics/eye.png';
-import likeIMG from '/src/assets/Statistics/like.png';
-import blueprintIMG from '/src/assets/Statistics/blueprint.png';
-import codeIMG from '/src/assets/Statistics/code.png';
-import OSS from '/src/assets/Statistics/box.png';
-import statsIMG from '/src/assets/Statistics/stats.png';
+import vidIMG from "/src/assets/Statistics/circle-video.png";
+import eyeIMG from "/src/assets/Statistics/eye.png";
+import likeIMG from "/src/assets/Statistics/like.png";
+import blueprintIMG from "/src/assets/Statistics/blueprint.png";
+import codeIMG from "/src/assets/Statistics/code.png";
+import OSS from "/src/assets/Statistics/box.png";
+import statsIMG from "/src/assets/Statistics/stats.png";
 
 export const Statistics = () => {
+  useEffect(() => {
+    sal();
+    
+  }, []);
 
   return (
-    <section className="
-    min-h-screen
+    <section
+      className="
+        min-h-screen
         flex flex-col
         items-center justify-center
         gap-10
-        ">
-
+      "
+    >
       {/* Title + Image */}
-
       <SectionTitle title="Statistics" img={statsIMG} />
 
-
       {/* Container for frames + cards */}
-
-      <div className='
-            flex flex-col 
-            gap-9'>
-
-              {/* Top of frame text */}
-               <AnimatedDiv>
-            <h1 className="
+      <div className="flex flex-col gap-9">
+        {/* Top of frame text */}
+        <div data-sal="slide-up" data-sal-duration="600" data-sal-delay="0" data-sal-easing="ease-out">
+          <h1
+            className="
               paragraph font-bold 
               text-md 
-              
               text-xl md:text-2xl
               text-center
-              mt-6"
-              >Production</h1>
-                  </AnimatedDiv>
-
+              mt-6
+            "
+          >
+            Production
+          </h1>
+        </div>
 
         <KPIcard
           stats={[
@@ -56,20 +59,20 @@ export const Statistics = () => {
 
         <ProdCards />
 
-                      {/* Top of frame text */}
-                       <AnimatedDiv
-      initial={{ opacity: 0, translateY: 75 }}
-      whileInView={{ opacity: 1, translateY: 0 }}
-      viewport={{ margin: "-200px", once: true }}>
-            <h1 className="
+        {/* Top of frame text */}
+        <div data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease-out">
+          <h1
+            className="
               paragraph font-bold 
               text-md 
-              
               text-xl md:text-2xl
               text-center
-              mt-6"
-              >Developing</h1>
-              </AnimatedDiv>
+              mt-6
+            "
+          >
+            Developing
+          </h1>
+        </div>
 
         <KPIcard
           stats={[
@@ -77,8 +80,8 @@ export const Statistics = () => {
             { img: OSS, alt: "OSS Commits", end: 5, suffix: "+", label: "OSS Commits" },
             { img: codeIMG, alt: "Lines of Code", end: 100, suffix: "K+", label: "Lines of Code" },
           ]}
-
         />
+
         <DevCards />
       </div>
     </section>
