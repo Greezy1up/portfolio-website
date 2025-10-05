@@ -1,12 +1,9 @@
-import AnimatedDiv from "../../AnimatedDiv";
 
 const Chip = ({ title, img }) => {
 
 
 return (
 
-    <AnimatedDiv delay = {0.1}
-        >
 
     <div className="
     flex items-center 
@@ -28,7 +25,6 @@ return (
       ">{title}</span>
 
     </div>
-    </AnimatedDiv>
 
 )
 }

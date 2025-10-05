@@ -1,4 +1,4 @@
-import { Hero } from "./Hero";
+import { Hero } from "./0-Hero/Hero";
 import { Statistics } from "./1-Statistics/Statistics";
 
 import { Contact } from "./3-Contact/Contact";

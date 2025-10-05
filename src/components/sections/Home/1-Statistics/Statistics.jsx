@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
+import sal from "sal.js";
 import { ProdCards } from "./ProdCards";
 import { DevCards } from "./DevCards";
 import KPIcard from "./KPIcard";
 import SectionTitle from "../SectionTitle";
-import sal from "sal.js";
 import "sal.js/dist/sal.css";
 
 import vidIMG from "/src/assets/Statistics/circle-video.png";
@@ -60,7 +60,7 @@ export const Statistics = () => {
         <ProdCards />
 
         {/* Top of frame text */}
-        <div data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease-out">
+        <div data-sal="slide-up" data-sal-duration="600" data-sal-easing="ease-out">
           <h1
             className="
               paragraph font-bold 

@@ -1,9 +1,9 @@
-import AnimatedDiv from "../../AnimatedDiv";
+
 const Socials = ({ img, link }) => {
 
     return (
 
-           <AnimatedDiv
+           <div
                      className='w-full max-w-[400px] md:max-w-[600px] order-1 md:order-2'
                 >
 
@@ -16,7 +16,7 @@ const Socials = ({ img, link }) => {
             </div>
 
 
-</AnimatedDiv>
+</div>
 
 
 

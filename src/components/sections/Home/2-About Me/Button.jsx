@@ -1,27 +1,23 @@
 //Button.jsx
 
-import { motion } from "framer-motion";
-import AnimatedDiv from "../../AnimatedDiv";
-
-let delayCounter = 0;
 
 const Button = ({ title, img, href }) => {
-  delayCounter += 0.1;
 
   return (
-    <AnimatedDiv delay={0.1}>
 
       <a href={href} target="_blank" rel="noopener noreferrer">
 
 
       {/* Button */}
         <div className="
-          w-40 h-12
-          rounded-2xl 
-          bg-red-800
-          border border-red-400
-          flex items-center justify-center 
-          transition duration-200 ease-in-out transform hover:scale-105
+    w-42 h-12
+    flex items-center justify-center
+    rounded-xl
+    transition duration-200 ease-in-out
+    transform hover:scale-105 hover:-translate-y-1
+    font-bold header text-xl md:text-2xl
+    bg-gradient-to-r from-red-900 to-rose-600
+    cursor-pointer
         ">
           <div className="
           flex flex-row 
@@ -37,7 +33,7 @@ const Button = ({ title, img, href }) => {
         </div>
 
       </a>
-    </AnimatedDiv>
+
   );
 };
 

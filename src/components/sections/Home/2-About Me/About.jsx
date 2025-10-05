@@ -1,5 +1,8 @@
+import React, { useEffect } from "react";
+import sal from "sal.js";
+
 import BookshelfModal from './BookshelfModal';
-import BigCard from "./BigCard";
+import Cards from "./Cards";
 import Button from "./Button";
 import Chip from "./Chip";
 import Paragraph from "./Paragraph";
@@ -11,13 +14,14 @@ import locIMG from '/src/assets/About Me/location.png';
 import resumeIMG from '/src/assets/About Me/resume.png';
 import resume from '/src/assets/About Me/resume.pdf';
 import clockIMG from '/src/assets/About Me/clock.png';
-import expIMG from '/src/assets/About Me/experience.png';
-import eduIMG from '/src/assets/About Me/edu.png';
-import certIMG from '/src/assets/About Me/cert.png';
-
 
 
 export const About = () => {
+
+  useEffect(() => {
+    sal();
+  }, []);
+
   return (
     <section
       id="about"
@@ -35,7 +39,6 @@ export const About = () => {
       {/* Main Content */}
       <div
         className="
-          w-fit
           flex flex-col
           md:flex-row
           justify-center
@@ -43,60 +46,25 @@ export const About = () => {
         "
       >
         {/* Left Column */}
-        <div
-          className="
-            flex flex-col
-            items-center
-            gap-6
-          "
-        >
+
           <div
             className="
               flex flex-col
-              items-center
               gap-6
             "
           >
-            {/* Paragraph */}
-            <div
-              className="
-                max-w-4xl
-                w-full
-              "
-            >
-              <Paragraph />
-            </div>
 
-            {/* Cards */}
-            <div
-              className="
-                flex flex-col
-                md:flex-row
-                gap-8
-                w-full
-              "
-            >
-              <BigCard
-                icon={expIMG}
-                title="Experience"
-                items={["6+ years production", "1+ years developing"]}
-              />
-              <BigCard
-                icon={eduIMG}
-                title="Education"
-                items={["6+ years production", "1+ years developing"]}
-              />
-              <BigCard
-                icon={certIMG}
-                title="Certificates"
-                items={["6+ years production", "1+ years developing"]}
-              />
-            </div>
+            <Paragraph />
+            <Cards />
+
           </div>
-        </div>
 
         {/* Right Column */}
         <div
+        data-sal="slide-up"
+      data-sal-duration="600"
+      data-sal-delay="300"
+      data-sal-easing="ease-out"
           className="
             flex flex-col
             gap-8
@@ -113,13 +81,18 @@ export const About = () => {
             <Chip title="Edmonton, Alberta" img={locIMG} />
             <Chip title="MDT Mountain Daylight Time" img={clockIMG} />
           </div>
-
+          
           <GoogleFrame />
+
         </div>
       </div>
 
       {/* Resume + Bookshelf */}
       <div
+      data-sal="slide-up"
+      data-sal-duration="600"
+      data-sal-delay="200"
+      data-sal-easing="ease-in-out-back"
         className="
           w-fit
           flex flex-row
@@ -129,6 +102,7 @@ export const About = () => {
         <Button img={resumeIMG} title="Resume" href={resume} />
         <BookshelfModal />
       </div>
+
     </section>
   );
 };

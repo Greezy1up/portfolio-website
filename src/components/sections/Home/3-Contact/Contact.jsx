@@ -2,7 +2,6 @@ import SectionTitle from '../SectionTitle';
 import ContactForm from './ContactForm';
 import ContactCard from './ContactCard';
 import Socials from './Socials';
-import AnimatedDiv from '../../AnimatedDiv';
 
 import contactIMG from '/src/assets/Contact/contact.png';
 import emailIMG from '/src/assets/Contact/email.png';
@@ -22,32 +21,41 @@ export const Contact = () => {
         flex flex-col
         items-center justify-center
         gap-10 px-4 
+        mb-25
             "
         >
-            {/* Title + Image */}
 
             <SectionTitle title="Contact" img={contactIMG} />
 
             {/* Full Content Wrapper */}
             <div className='
-            flex flex-col md:flex-row-reverse  
-            gap-8
+            flex flex-col md:flex-row
+            gap-12
             w-full max-w-4xl 
             items-center md:items-start
             '>
 
-                <ContactForm />
-
                 {/* Cards + Socials Wrapper */}
-                <div className='
+                <div
+
+        data-sal="slide-up"
+      data-sal-duration="600"
+      data-sal-delay="0"
+      data-sal-easing="ease-out"
+                
+                
+                className='
                     flex flex-col items-center md:items-start
                     gap-14
-                     w-fit 
                       '>
 
 
                     {/* Email and Discord Cards */}
-                    <div className="
+                    <div 
+
+                    
+                    
+                    className="
                     flex flex-col
                     gap-8 
                 ">
@@ -66,25 +74,25 @@ export const Contact = () => {
                     
                      '>
 
-                        <AnimatedDiv>
+
 
                             <span className='
                         sub-head font-bold 
                         text-lg
                         md:text-xl
                         '>
-                                Follow Me:</span>
+                            
+                        Follow Me:
 
-                        </AnimatedDiv>
+                        </span>
+
 
                         <div className='
                         flex flex-row 
-                        md:gap-3 gap-6 
+                        md:gap-3 gap-6
                         items-center
                         
                          '>
-
-
 
                             <Socials img={xIMG} link="https://x.com/greezy1up" />
                             <Socials img={ytIMG} link="https://www.youtube.com/channel/UCApyQAuRHHSoteYJNPazjXg" />
@@ -96,6 +104,20 @@ export const Contact = () => {
 
                 </div>
 
+<div
+
+        data-sal="slide-up"
+      data-sal-duration="600"
+      data-sal-delay="100"
+      data-sal-easing="ease-out"
+
+      className='w-full'
+
+>
+
+
+                 <ContactForm />
+</div>
 
 
             </div>

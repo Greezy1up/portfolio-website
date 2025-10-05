@@ -1,18 +1,11 @@
 //BigCard.jsx
 
 import SpotlightCard from '../../../SpotlightCard';
-import AnimatedDiv from '../../AnimatedDiv';
 
-let delayCounter = 0;
 
 const BigCard = ({ icon, title, items }) => {
-  delayCounter += 0.1;
 
   return (
-    <AnimatedDiv
-      transition={{ delay: delayCounter}}
-    >
-
         <SpotlightCard
           spotlightColor="rgba(255, 255, 255, 0.1)"
         >
@@ -46,8 +39,6 @@ const BigCard = ({ icon, title, items }) => {
 
           </div>
         </SpotlightCard>
-
-    </AnimatedDiv>
   );
 };
 

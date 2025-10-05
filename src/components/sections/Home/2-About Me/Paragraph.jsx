@@ -1,16 +1,21 @@
 // Paragraph.jsx
 
-import AnimatedDiv from "../../AnimatedDiv";
-
 const Paragraph = () => {
 
     return (
+                <div
 
-        <AnimatedDiv
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.1}} 
-        >
+              data-sal="slide-up"
+              data-sal-duration="600"
+              data-sal-delay="0"
+              data-sal-easing="ease-out"
+
+              className="
+                max-w-4xl
+              "
+              >
+            
+
             <p className="
             paragraph gray text-xs 
             md:text-base 
@@ -28,15 +33,8 @@ const Paragraph = () => {
             {"\n"}
 
             This is a newline.
-            
-
             </p>
-
-        </AnimatedDiv>
-
-
-
-
+</div>
     );
 
 }

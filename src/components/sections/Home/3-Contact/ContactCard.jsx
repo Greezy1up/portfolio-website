@@ -1,22 +1,22 @@
-import AnimatedDiv from "../../AnimatedDiv";
 
 
 const ContactCard = ({title, img, subtext}) => {
 
 
-return (
 
-    <AnimatedDiv
+return (
+  
+
+    <div
+    
                     className="
-                    relative 
                     w-full 
                     md:w-[350px] h-[90px] 
                     flex items-center 
-                    overflow-hidden 
                     rounded-xl 
                     border border-neutral-800
-                     bg-neutral-800/20 
-                     px-6 gap-4
+                    bg-neutral-800/20 
+                    px-6 gap-4
                      "
                 >
 
@@ -34,7 +34,7 @@ return (
       </h1>
 
 
-</AnimatedDiv>
+</div>
 )
 }
 

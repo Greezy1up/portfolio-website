@@ -1,4 +1,4 @@
-import AnimatedDiv from "../../AnimatedDiv";
+
 
 const ContactForm = () => {
 
@@ -7,7 +7,7 @@ const ContactForm = () => {
     return (
 
     
-                <AnimatedDiv
+                <div
                     className='
                     rounded-xl 
                     border border-neutral-800
@@ -47,7 +47,7 @@ const ContactForm = () => {
                         </form>
         
 
-                </AnimatedDiv>
+                </div>
 
 
     )

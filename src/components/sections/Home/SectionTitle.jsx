@@ -1,5 +1,3 @@
-import AnimatedDiv from "../AnimatedDiv";
-
 
 const SectionTitle = ({title, img}) => {
 
@@ -10,7 +8,7 @@ return (
       data-sal="slide-left"
       data-sal-duration="600"
       data-sal-delay="0"
-      data-sal-easing="ease-in-out-sine"
+      data-sal-easing="ease-out"
       className='
         flex flex-col 
         items-center
