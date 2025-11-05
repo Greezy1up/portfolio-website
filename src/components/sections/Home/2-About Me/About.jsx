@@ -25,7 +25,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="
+      className=" md:scroll-mt-0 scroll-mt-16
         min-h-screen
         flex flex-col
         items-center
@@ -101,6 +101,7 @@ export const About = () => {
       >
         <Button img={resumeIMG} title="Resume" href={resume} />
         <BookshelfModal />
+        
       </div>
 
     </section>

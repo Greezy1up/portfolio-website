@@ -1,29 +1,28 @@
-import { useEffect } from "react";
-
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
-    <div
-      className={`fixed top-0 left-0 w-full bg-red z-40 flex-col items-center justify-center
-        transition-all duration-300 ease-in-out 
-        
-        ${
-          menuOpen
-            ? "h-screen opacity-100 pointer-events-auto"
-            : "h-0 opacity-0 pointer-events-none"
-        }`}
-    >
-      <button 
-      onClick={() => setMenuOpen(false)} 
-      className="absolute top-6 right-6 text-white text-3xl"
-      aria-label="Close Menu"
+    <>
+      {/* Toggle Hamburger */}
+      <button
+        onClick={() => setMenuOpen(!menuOpen)}
+        className="md:hidden fixed top-2 right-3 text-4xl z-41 text-white"
       >
-        &times;
+        {menuOpen ? "×" : "☰"}
       </button>
 
-      <a>
-        
-      </a>
-
-    </div>
+      {/* Conditionally render overlay only if menuOpen is true */}
+      {menuOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-xs text-white flex flex-col justify-center
+          transition-all duration-300 ease-in-out z-40"
+        >
+          <nav className="flex flex-col items-center gap-18 header font-medium text-4xl text-white">
+            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+            <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          </nav>
+        </div>
+      )}
+    </>
   );
 };

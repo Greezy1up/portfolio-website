@@ -17,6 +17,7 @@ export const Contact = () => {
         <section
             id="contact"
             className="
+            md:scroll-mt-0 scroll-mt-16
     min-h-screen
         flex flex-col
         items-center justify-center
@@ -29,7 +30,7 @@ export const Contact = () => {
 
             {/* Full Content Wrapper */}
             <div className='
-            flex flex-col md:flex-row
+            flex flex-col-reverse md:flex-row
             gap-12
             w-full max-w-4xl 
             items-center md:items-start
