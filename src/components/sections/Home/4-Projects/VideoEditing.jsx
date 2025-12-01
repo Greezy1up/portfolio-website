@@ -1,69 +1,68 @@
 
+import { VideoPortfolio } from "./VideoPortfolio";
 import VideoPort from "/src/assets/Projects/VideoPort.webm";
+import editIMG from "/src/assets/Projects/editIMG.png";
 
 export const VideoEditing = () => {
-
-    return(
-        <div className=" flex flex-col items-center gap-12">
-    <h1 className="header font-medium text-4xl md:text-5xl text-center">
-      Video Editing
-    </h1>
-
-    {/* YouTube embeds */}
-    <div className="flex flex-row gap-12 ">
-      <iframe
-        width="480"
-        height="270"
-        src="https://www.youtube.com/embed/lYBMyn1ZcS0"
-        allowFullScreen
-        className="rounded-xl border-1 border-neutral-500"
-      />
-      <iframe
-        width="480"
-        height="270"
-        src="https://www.youtube.com/embed/294oshGeqNU?si=GIYdkn4AlWnxGhxR"
-        allowFullScreen
-        className="rounded-xl border-1 border-neutral-500"
-      />
-    </div>
-
-    {/* Video */}
-    <a
-      href="https://ytjobs.co/talent/profile/427403?r=650"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative group w-lg border-1 border-neutral-500 rounded-xl
-                 transition duration-200 ease-in-out cursor-pointer transform hover:scale-105"
-    >
-      <video
-  src={VideoPort}
-  autoPlay
-  loop
-  muted
-  playsInline
-  controls={false}
-  preload="auto"
-  className="w-lg rounded-xl
-             transition-all duration-300 ease-in-out
-             filter brightness-50 blur-[2px]
-             group-hover:brightness-100 group-hover:blur-[0px]"
-/>
+  return (
+    <div className="flex justify-center">
+      <div className="flex flex-col items-center justify-center gap-16 bg-white/5 rounded-xl p-12 w-fit">
 
 
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center
-                        w-46 h-20 md:w-60 md:h-20
-                        border border-neutral-800 bg-black/50
-                        transition-all duration-200 ease-in-out
-                        group-hover:bg-black/90
-                        rounded-xl">
-          <h1 className="sub-head font-medium text-xl text-center text-white">
-            Full Portfolio
-          </h1>
-        </div>
+          <div
+      className='
+        flex flex-col gap-2
+        items-center
+        '>
+
+        <img src={editIMG} className='
+        w-7 md:w-9 
+        '/>
+
+        <h2 className="
+                header font-medium
+                text-4xl md:text-5xl
+                text-center
+        ">Video Editing</h2>
+
       </div>
-    </a>
-    </div>
+      
+        {/* YouTube embeds */}
+        <div className="grid grid-cols-2 gap-12">
+          <iframe
+            width="480"
+            height="270"
+            src="https://www.youtube.com/embed/lYBMyn1ZcS0"
+            allowFullScreen
+            className="rounded-xl border-1 border-neutral-500"
+          />
+          <iframe
+            width="480"
+            height="270"
+            src="https://www.youtube.com/embed/294oshGeqNU?si=GIYdkn4AlWnxGhxR"
+            allowFullScreen
+            className="rounded-xl border-1 border-neutral-500"
+          />
+          <iframe
+            width="480"
+            height="270"
+            src="https://www.youtube.com/embed/2EN8sAXlUao?si=Qvrx08So8UA7Eozd"
+            allowFullScreen
+            className="rounded-xl border-1 border-neutral-500"
+          />
+          <iframe
+            width="480"
+            height="270"
+            src="https://www.youtube.com/embed/lJ5XeeJhHkA?si=y-ITn2kWIT4zvc7F"
+            allowFullScreen
+            className="rounded-xl border-1 border-neutral-500"
+          />
+        </div>
 
-    );
+        {/* Video */}
+        <VideoPortfolio />
+
+      </div>
+    </div>
+  );
 };
