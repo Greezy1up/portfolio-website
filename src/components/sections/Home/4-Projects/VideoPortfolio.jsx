@@ -18,7 +18,7 @@ export const VideoPortfolio = () => {
                     playsInline
                     controls={false}
                     preload="auto"
-                    className="w-lg rounded-xl
+                    className="md:w-lg rounded-xl
                                transition-all duration-300 ease-in-out
                                filter brightness-50 blur-[2px]
                                group-hover:brightness-100 group-hover:blur-[0px]"
@@ -27,14 +27,13 @@ export const VideoPortfolio = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
 
                     <div className="flex items-center justify-center
-                                    w-60 h-20
+                                    md:w-60 md:h-20 w-42 h-12
                                     border border-neutral-800 bg-black/50
-                                    transition-all duration-200 ease-in-out
-                                    group-hover:bg-black/90
+                                    transition-all duration-200 ease-in-out group-hover:bg-black/90
                                     rounded-xl
                                     ">
                                         
-                      <h1 className="sub-head font-semibold text-xl text-white">
+                      <h1 className="sub-head font-semibold md:text-xl text-lg text-white">
                         Full Portfolio
                       </h1>
 

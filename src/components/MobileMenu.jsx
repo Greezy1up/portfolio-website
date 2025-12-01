@@ -16,7 +16,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen, setShowProjects }) => {
       {/* Toggle Hamburger */}
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="md:hidden fixed top-2 right-3 text-4xl z-41 text-white"
+        className="md:hidden fixed top-2 right-3 text-6xl z-41 text-white"
       >
         {menuOpen ? "×" : "☰"}
       </button>

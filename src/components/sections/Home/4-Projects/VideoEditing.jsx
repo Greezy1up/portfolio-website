@@ -6,7 +6,7 @@ import editIMG from "/src/assets/Projects/editIMG.png";
 export const VideoEditing = () => {
   return (
     <div className="flex justify-center">
-      <div className="flex flex-col items-center justify-center gap-16 bg-white/5 rounded-xl p-12 w-fit">
+      <div className="flex flex-col items-center justify-center gap-8 md:gap-12 bg-white/5 rounded-xl p-12 w-fit">
 
 
           <div
@@ -28,34 +28,26 @@ export const VideoEditing = () => {
       </div>
       
         {/* YouTube embeds */}
-        <div className="grid grid-cols-2 gap-12">
-          <iframe
-            width="480"
-            height="270"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+           <iframe
+            className="w-72 md:w-120 aspect-video rounded-xl border-1 border-neutral-500"
             src="https://www.youtube.com/embed/lYBMyn1ZcS0"
             allowFullScreen
-            className="rounded-xl border-1 border-neutral-500"
           />
           <iframe
-            width="480"
-            height="270"
+            className="w-72 md:w-120 aspect-video rounded-xl border-1 border-neutral-500"
             src="https://www.youtube.com/embed/294oshGeqNU?si=GIYdkn4AlWnxGhxR"
             allowFullScreen
-            className="rounded-xl border-1 border-neutral-500"
           />
           <iframe
-            width="480"
-            height="270"
+            className="w-72 md:w-120 aspect-video rounded-xl border-1 border-neutral-500"
             src="https://www.youtube.com/embed/2EN8sAXlUao?si=Qvrx08So8UA7Eozd"
             allowFullScreen
-            className="rounded-xl border-1 border-neutral-500"
           />
           <iframe
-            width="480"
-            height="270"
+            className="w-72 md:w-120 aspect-video rounded-xl border-1 border-neutral-500"
             src="https://www.youtube.com/embed/lJ5XeeJhHkA?si=y-ITn2kWIT4zvc7F"
             allowFullScreen
-            className="rounded-xl border-1 border-neutral-500"
           />
         </div>
 

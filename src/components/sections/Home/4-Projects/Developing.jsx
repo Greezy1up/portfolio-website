@@ -7,7 +7,7 @@ import codeIMG from "/src/assets/Projects/codeIMG.png";
 export const Developing = () => {
   return (
     <div className="flex justify-center">
-    <div className=" flex flex-col items-center justify-center gap-16 bg-white/5 rounded-xl p-12 w-fit">
+    <div className="flex flex-col items-center justify-center gap-8 md:gap-12 bg-white/5 rounded-xl p-12 w-fit">
     
  <div
       className='
@@ -27,26 +27,27 @@ export const Developing = () => {
 
       </div>
 
- {/* Make this modular + add carousel to images */}
+ {/* TODO: Make this modular + add carousel to images */}
 
       {/* Project 1 */}
-      <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+      <div className="flex flex-col md:flex-row gap-6 md:gap-12">
         
-        {/* Image */}
-        <div className="w-[480px] aspect-video rounded-xl overflow-hidden">
+        <div className="w-72 h-fit md:w-120 aspect-video border-1 border-neutral-500 rounded-xl overflow-hidden ">
           <img
             src={WebsiteScr}
-            className="w-full h-full object-cover border-1 border-neutral-500 rounded-xl"
           />
         </div>
 
         {/* Text Info */}
-        <div className="w-[480px] rounded-xl p-4 flex flex-col gap-2">
+        <div className="w-72 md:w-120 rounded-xl flex flex-col gap-2">
           <h1 className="paragraph text-xl font-bold">Portfolio Website</h1>
           <Chip className="w-fit" img={REACTimg} title="React" />
 
-          <span className="paragraph text-xs md:text-base whitespace-pre-line gray">
+          <span className="paragraph text-xs md:text-base gray">
            <br />yo this my site gang this my site gang wyus
+            yo this my site gang wyus site gang this my site gang wyus
+            yo this my site gang wyus site gang this my site gang wyus
+            yo this my site gang wyus site gang this my site gang wyus
             yo this my site gang wyus
           </span>
  
@@ -61,7 +62,7 @@ export const Developing = () => {
              group-hover:bg-black/90 hover:cursor-pointer transform hover:scale-105
              rounded-xl"
 >
-  <h1 className="sub-head font-medium text-lg text-center text-white">
+  <h1 className="sub-head font-medium text-base md:text-lg text-center text-white">
     Visit Repo
   </h1>
 </a>
