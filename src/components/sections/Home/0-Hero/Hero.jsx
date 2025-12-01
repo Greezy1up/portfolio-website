@@ -5,7 +5,7 @@ import sal from "sal.js";
 import "sal.js/dist/sal.css";
 import { Button } from "./Button";
 
-export const Hero = () => {
+export const Hero = ({openProjects}) => {
   useEffect(() => {
     sal();
   }, []);
@@ -67,7 +67,7 @@ export const Hero = () => {
           
           className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
 
-           <Button href="#projects" title="Projects" variant="filled" />
+           <Button onClick={openProjects} title="Projects" variant="filled" />
            <Button href="#contact" title="Contact" variant="outline" />
         </div>
       </div>

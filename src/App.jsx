@@ -10,18 +10,12 @@ function App() {
 
   return (
     <>
+      <div className="grain"></div>
 
-      <div className='grain'></div>
-
-      <div
-      >
-
-        <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-        <HomePage />
-
-
-      </div>
+      <HomePage
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
     </>
   );
 }

@@ -19,3 +19,10 @@
 .gray {
     color: #666666 
 }
+
+.modal-scroll {
+  overflow-y: auto;
+  max-height: 100vh;
+  overscroll-behavior: contain;
+}
+

@@ -1,16 +1,26 @@
 import { useEffect } from "react";
 
-export const NavBar = ({ menuOpen }) => {
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-  }, [menuOpen]);
+export const NavBar = ({ setShowProjects }) => {
+
+
+
+  // Handle clicks to close Projects and scroll to section
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    setShowProjects(false); // Close the Projects overlay
+    const target = document.querySelector(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
-    <nav className="fixed top-0 w-full z-40">
-      <div className="flex justify-center items-center h-16 space-x-8 bg-gradient-to-b from-black to-transparent">
-        <div className="flex justify-between items-center h-16 w-full max-w-screen-xl px-4">
+    <nav className="fixed w-full z-40 bg-gradient-to-b from-black">
+     <div className="flex justify-between items-center h-16 max-w-screen-xl mx-auto w-full px-4">
+
           <a
             href="#home"
+            onClick={(e) => handleNavClick(e, "#home")}
             className="header font-bold text-4xl text-red-800"
           >
             Greezy
@@ -18,21 +28,38 @@ export const NavBar = ({ menuOpen }) => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#store" className="header font-medium text-2xl text-red-800 hover:text-white transition-colors">
+            <a
+              href="#store"
+              onClick={(e) => handleNavClick(e, "#store")}
+              className="header font-medium text-2xl text-red-800 hover:text-white transition-colors"
+            >
               Store
             </a>
-            <a href="#about" className="header font-medium text-2xl text-white hover:text-red-400 transition-colors">
+            <a
+              href="#about"
+              onClick={(e) => handleNavClick(e, "#about")}
+              className="header font-medium text-2xl text-white hover:text-red-400 transition-colors"
+            >
               About
             </a>
-            <a href="#projects" className="header font-medium text-2xl text-white hover:text-red-400 transition-colors">
+
+            <button
+              onClick={() => setShowProjects(true)}
+              className="header font-medium text-2xl text-white hover:text-red-400 transition-colors hover:cursor-pointer"
+            >
               Projects
-            </a>
-            <a href="#contact" className="header font-medium text-2xl text-white hover:text-red-400 transition-colors">
+            </button>
+
+            <a
+              href="#contact"
+              onClick={(e) => handleNavClick(e, "#contact")}
+              className="header font-medium text-2xl text-white hover:text-red-400 transition-colors"
+            >
               Contact
             </a>
           </div>
         </div>
-      </div>
+   
     </nav>
   );
 };
