@@ -52,8 +52,8 @@ export const Statistics = () => {
         <KPIcard
           stats={[
             { img: vidIMG, alt: "Videos", end: 250, suffix: "+", label: "Videos" },
-            { img: eyeIMG, alt: "Views", end: 180, suffix: "M+", label: "Views" },
-            { img: likeIMG, alt: "Likes", end: 10, suffix: "M+", label: "Likes" },
+            { img: eyeIMG, alt: "Views", end: 275, suffix: "M+", label: "Views" },
+            { img: likeIMG, alt: "Likes", end: 3, suffix: "M+", label: "Likes" },
           ]}
         />
 
@@ -76,9 +76,9 @@ export const Statistics = () => {
 
         <KPIcard
           stats={[
-            { img: blueprintIMG, alt: "Projects", end: 2, suffix: "+", label: "Projects" },
-            { img: OSS, alt: "OSS Commits", end: 5, suffix: "+", label: "OSS Commits" },
-            { img: codeIMG, alt: "Lines of Code", end: 100, suffix: "K+", label: "Lines of Code" },
+            { img: blueprintIMG, alt: "Projects", end: 1, suffix: "+", label: "Projects" },
+            { img: OSS, alt: "OSS Commits", end: 0, suffix: "+", label: "OSS Commits" },
+            { img: codeIMG, alt: "Lines of Code", end: 1, suffix: "K+", label: "Lines of Code" },
           ]}
         />
 

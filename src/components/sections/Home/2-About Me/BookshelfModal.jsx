@@ -23,7 +23,7 @@ const BookshelfModal = () => {
             bg-black/50 backdrop-blur-sm 
             flex items-center justify-center
           "
-          onClick={() => setIsOpen(false)} // close on background click
+          onClick={() => setIsOpen(false)}
         >
           
           {/* Modal */}
@@ -34,7 +34,7 @@ const BookshelfModal = () => {
               shadow-black shadow-md
               relative md:w-xl w-sm
             "
-            onClick={(e) => e.stopPropagation()} // prevent close on inner click
+            onClick={(e) => e.stopPropagation()} 
           >
             <h2 className="
               sub-head font-medium text-2xl text-white mb-4
@@ -46,16 +46,16 @@ const BookshelfModal = () => {
               paragraph list-disc pl-8 text-gray-300 text-lg leading-relaxed
              overflow-y-auto
             ">
-              <li>Item One</li>
-              <li>Item Two</li>
-              <li>Item Three</li>
-              <li>Item Four</li>
-              <li>Item Five</li>
-              <li>Item Six</li>
-              <li>Item Seven</li>
-              <li>Item Eight</li>
-              <li>Item Nine</li>
-              <li>Item Ten</li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>10</li>
             </ul>
 
             {/* X button */}

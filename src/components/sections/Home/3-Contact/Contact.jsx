@@ -61,7 +61,10 @@ export const Contact = () => {
                     gap-8 
                 ">
 
+<a href="mailto:greezy1up@gmail.com" target="_blank" rel="noopener noreferrer">
+
                         <ContactCard title="greezy1up@gmail.com" img={emailIMG} subtext="Email" />
+                        </a>
                         <ContactCard title="greezy1up" img={discordIMG} subtext="Discord" />
 
                     </div>
